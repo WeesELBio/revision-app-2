@@ -1,0 +1,19 @@
+body {
+    font-family: Arial;
+    max-width: 900px;
+    margin: auto;
+}
+
+#answers button {
+    display: block;
+    margin: 6px 0;
+    width: 100%;
+}
+
+.correct {
+    background-color: #b6f7b6;
+}
+
+.wrong {
+    background-color: #f7b6b6;
+}
