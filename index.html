@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Revision Program</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Revision Program</h1>
+
+<section id="controls">
+    <h2>Topics</h2>
+    <div id="topicBox"></div>
+
+    <h3>Mode</h3>
+    <label><input type="radio" name="mode" value="normal" checked> Normal</label>
+    <label><input type="radio" name="mode" value="hard"> Hard</label>
+
+    <br><br>
+    <button onclick="nextQuestion()">Start / Next Question</button>
+</section>
+
+<hr>
+
+<section id="questionArea">
+    <h2 id="questionText"></h2>
+
+    <div id="answers"></div>
+
+    <br>
+    <button onclick="checkAnswer()">Check Answer</button>
+
+    <p id="feedback"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
