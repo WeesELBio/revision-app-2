@@ -2,26 +2,266 @@
   "Biology": {
     "Biological Molecules": {
       "Carbohydrates - Monosaccharides": [
-        {
-          "question": "Which element is not found in carbohydrates?",
-          "correct": "Nitrogen",
-          "options": [
-            "Carbon",
-            "Hydrogen",
-            "Oxygen",
-            "Nitrogen"
-          ]
-        },
-        {
-          "question": "What is the general formula of a monosaccharide?",
-          "correct": "Cn(H2O)n",
-          "options": [
-            "CnH2n",
-            "Cn(H2O)n",
-            "C2H6O",
-            "CH4"
-          ]
-        }
+      	{
+      		"question": "What are biological molecules?",
+      		"correct": "Chemical groups found in living organisms.",
+      		"options": [
+      			"Chemical groups found in living organisms.",
+      			"Large inorganic compounds found in cells.",
+      			"Substances only found in plants.",
+      			"Molecules that do not contain carbon."
+      		]
+      	},
+      	{
+      		"question": "What is the study of biological molecules called?",
+      		"correct": "Molecular biology.",
+      		"options": [
+      			"Molecular biology.",
+      			"Biochemistry.",
+      			"Cell biology.",
+      			"Genetics."
+      		]
+      	},
+      	{
+      		"question": "What are all molecules made of?",
+      		"correct": "Atoms.",
+      		"options": [
+      			"Atoms.",
+      			"Cells.",
+      			"Ions.",
+      			"Elements."
+      		]
+      	},
+      	{
+      		"question": "What defines covalent bonding?",
+      		"correct": "Atoms share a pair of electrons in their outer shells.",
+      		"options": [
+      			"Atoms share a pair of electrons in their outer shells.",
+      			"Electrons are transferred between atoms.",
+      			"Oppositely charged ions attract.",
+      			"Weak attractions form between molecules."
+      		]
+      	},
+      	{
+      		"question": "Why does covalent bonding form stable molecules?",
+      		"correct": "Because both atoms have their outer shells filled.",
+      		"options": [
+      			"Because both atoms have their outer shells filled.",
+      			"Because electrons are completely removed.",
+      			"Because ions are produced.",
+      			"Because the molecules become charged."
+      		]
+      	},
+      	{
+      		"question": "What causes ionic bonding?",
+      		"correct": "Electrostatic attraction between ions with opposite charges.",
+      		"options": [
+      			"Electrostatic attraction between ions with opposite charges.",
+      			"Sharing of electrons between atoms.",
+      			"Unequal distribution of electrons in molecules.",
+      			"Attraction between neutral atoms."
+      		]
+      	},
+      	{
+      		"question": "How strong are ionic bonds compared to covalent bonds?",
+      		"correct": "They are weaker than covalent bonds.",
+      		"options": [
+      			"They are weaker than covalent bonds.",
+      			"They are stronger than covalent bonds.",
+      			"They are equal in strength.",
+      			"They are not real chemical bonds."
+      		]
+      	},
+      	{
+      		"question": "Why can hydrogen bonds form between molecules?",
+      		"correct": "Because electrons are unevenly distributed, making molecules polar.",
+      		"options": [
+      			"Because electrons are unevenly distributed, making molecules polar.",
+      			"Because electrons are shared equally.",
+      			"Because atoms lose electrons.",
+      			"Because molecules become ions."
+      		]
+      	},
+      	{
+      		"question": "What is the nature of hydrogen bonds individually?",
+      		"correct": "They are weak.",
+      		"options": [
+      			"They are weak.",
+      			"They are very strong.",
+      			"They are identical to covalent bonds.",
+      			"They permanently bind molecules."
+      		]
+      	},
+      	{
+      		"question": "Why are hydrogen bonds biologically important?",
+      		"correct": "Because many weak bonds together can have a strong overall effect.",
+      		"options": [
+      			"Because many weak bonds together can have a strong overall effect.",
+      			"Because they are stronger than covalent bonds.",
+      			"Because they only form in solids.",
+      			"Because they create ions."
+      		]
+      	},
+      	{
+      		"question": "What is a monomer?",
+      		"correct": "A small, repeating unit that can join to form a polymer.",
+      		"options": [
+      			"A small, repeating unit that can join to form a polymer.",
+      			"A large molecule made of many units.",
+      			"A molecule that cannot bond to others.",
+      			"A type of inorganic compound."
+      		]
+      	},
+      	{
+      		"question": "What is a polymer?",
+      		"correct": "A long chain of monomers formed by polymerisation.",
+      		"options": [
+      			"A long chain of monomers formed by polymerisation.",
+      			"A single small molecule.",
+      			"A molecule made only of water.",
+      			"A substance that cannot be broken down."
+      		]
+      	},
+      	{
+      		"question": "What type of element forms the basis of many biological polymers?",
+      		"correct": "Carbon.",
+      		"options": [
+      			"Carbon.",
+      			"Oxygen.",
+      			"Hydrogen.",
+      			"Nitrogen."
+      		]
+      	},
+      	{
+      		"question": "What are polysaccharides made from?",
+      		"correct": "Monosaccharides.",
+      		"options": [
+      			"Monosaccharides.",
+      			"Amino acids.",
+      			"Nucleotides.",
+      			"Fatty acids."
+      		]
+      	},
+      	{
+      		"question": "What are polypeptides made from?",
+      		"correct": "Amino acids.",
+      		"options": [
+      			"Amino acids.",
+      			"Monosaccharides.",
+      			"Nucleotides.",
+      			"Lipids."
+      		]
+      	},
+      	{
+      		"question": "What are polynucleotides made from?",
+      		"correct": "Nucleotides.",
+      		"options": [
+      			"Nucleotides.",
+      			"Amino acids.",
+      			"Monosaccharides.",
+      			"Fatty acids."
+      		]
+      	},
+      	{
+      		"question": "What is the function of a condensation reaction?",
+      		"correct": "To join monomers together to form polymers.",
+      		"options": [
+      			"To join monomers together to form polymers.",
+      			"To break polymers into monomers.",
+      			"To remove all water from cells.",
+      			"To add oxygen to molecules."
+      		]
+      	},
+      	{
+      		"question": "What is released during a condensation reaction?",
+      		"correct": "A molecule of water.",
+      		"options": [
+      			"A molecule of water.",
+      			"Oxygen.",
+      			"Carbon dioxide.",
+      			"Energy only."
+      		]
+      	},
+      	{
+      		"question": "What is the function of a hydrolysis reaction?",
+      		"correct": "To break polymers into monomers using water.",
+      		"options": [
+      			"To break polymers into monomers using water.",
+      			"To join monomers together.",
+      			"To remove atoms from molecules.",
+      			"To create new elements."
+      		]
+      	},
+      	{
+      		"question": "How does hydrolysis break chemical bonds?",
+      		"correct": "By using water to break the bonds.",
+      		"options": [
+      			"By using water to break the bonds.",
+      			"By releasing water.",
+      			"By removing electrons.",
+      			"By forming ions."
+      		]
+      	},
+      	{
+      		"question": "What is metabolism?",
+      		"correct": "All chemical reactions occurring in living organisms.",
+      		"options": [
+      			"All chemical reactions occurring in living organisms.",
+      			"Only reactions that release energy.",
+      			"Only digestion reactions.",
+      			"Only reactions inside the nucleus."
+      		]
+      	},
+      	{
+      		"question": "What is the mole?",
+      		"correct": "The SI unit for amount of substance.",
+      		"options": [
+      			"The SI unit for amount of substance.",
+      			"The unit for mass.",
+      			"The unit for volume.",
+      			"The unit for concentration."
+      		]
+      	},
+      	{
+      		"question": "What does one mole represent?",
+      		"correct": "The number of particles in 12 grams of carbon-12.",
+      		"options": [
+      			"The number of particles in 12 grams of carbon-12.",
+      			"The mass of one atom.",
+      			"The volume of a gas.",
+      			"The charge of an ion."
+      		]
+      	},
+      	{
+      		"question": "What is the value of the Avogadro constant?",
+      		"correct": "6.022 × 10^23 particles.",
+      		"options": [
+      			"6.022 × 10^23 particles.",
+      			"1.0 × 10^3 particles.",
+      			"12 particles.",
+      			"58.5 particles."
+      		]
+      	},
+      	{
+      		"question": "What is a molar solution?",
+      		"correct": "A solution containing one mole of solute per litre.",
+      		"options": [
+      			"A solution containing one mole of solute per litre.",
+      			"A solution containing one gram per litre.",
+      			"A solution containing one molecule per litre.",
+      			"A solution with no solvent."
+      		]
+      	},
+      	{
+      		"question": "What does molecular mass represent in relation to one mole?",
+      		"correct": "The mass in grams required to make one mole of a substance.",
+      		"options": [
+      			"The mass in grams required to make one mole of a substance.",
+      			"The number of atoms in a molecule.",
+      			"The volume of a substance.",
+      			"The density of a compound."
+      		]
+      	}
       ]
     }
   }
