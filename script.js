@@ -3,25 +3,30 @@ let currentQuestion = null;
 let selectedAnswer = null;
 
 fetch("questions.json")
-    .then(res => res.json())
+    .then(r => r.json())
     .then(data => {
         questions = data;
-        buildTopicSelector();
+        buildMenu();
+        nextQuestion(); // AUTO LOAD FIRST QUESTION
     });
 
-function buildTopicSelector() {
-    const box = document.getElementById("topicBox");
+function buildMenu() {
+    const menu = document.getElementById("menu");
 
     for (let subject in questions) {
-        const s = document.createElement("h3");
-        s.textContent = subject;
-        box.appendChild(s);
+        const subjectDetails = document.createElement("details");
+        subjectDetails.open = true;
+
+        const subjectSummary = document.createElement("summary");
+        subjectSummary.textContent = subject;
+        subjectDetails.appendChild(subjectSummary);
 
         for (let topic in questions[subject]) {
-            const t = document.createElement("strong");
-            t.textContent = topic;
-            box.appendChild(t);
-            box.appendChild(document.createElement("br"));
+            const topicDetails = document.createElement("details");
+
+            const topicSummary = document.createElement("summary");
+            topicSummary.textContent = topic;
+            topicDetails.appendChild(topicSummary);
 
             for (let sub in questions[subject][topic]) {
                 const id = `${subject}-${topic}-${sub}`;
@@ -35,35 +40,42 @@ function buildTopicSelector() {
                 label.htmlFor = id;
                 label.textContent = " " + sub;
 
-                box.appendChild(cb);
-                box.appendChild(label);
-                box.appendChild(document.createElement("br"));
+                topicDetails.appendChild(cb);
+                topicDetails.appendChild(label);
+                topicDetails.appendChild(document.createElement("br"));
             }
+
+            subjectDetails.appendChild(topicDetails);
         }
+
+        menu.appendChild(subjectDetails);
     }
 }
 
-function getSelectedQuestions() {
+function getPool() {
     let pool = [];
 
     for (let subject in questions) {
         for (let topic in questions[subject]) {
             for (let sub in questions[subject][topic]) {
                 const id = `${subject}-${topic}-${sub}`;
-                if (document.getElementById(id).checked) {
+                const box = document.getElementById(id);
+                if (box && box.checked) {
                     pool.push(...questions[subject][topic][sub]);
                 }
             }
         }
     }
+
     return pool;
 }
 
 function nextQuestion() {
     document.getElementById("feedback").textContent = "";
     document.getElementById("answers").innerHTML = "";
+    selectedAnswer = null;
 
-    const pool = getSelectedQuestions();
+    const pool = getPool();
     if (pool.length === 0) {
         document.getElementById("questionText").textContent =
             "No topics selected.";
@@ -77,33 +89,34 @@ function nextQuestion() {
     const mode = document.querySelector('input[name="mode"]:checked').value;
 
     if (mode === "normal") {
-        showMultipleChoice();
+        showNormal();
     } else {
-        showHardMode();
+        showHard();
     }
 }
 
-function showMultipleChoice() {
-    selectedAnswer = null;
-    const answersDiv = document.getElementById("answers");
-
+function showNormal() {
     let opts = [...currentQuestion.options];
     opts.sort(() => Math.random() - 0.5);
+
+    const area = document.getElementById("answers");
 
     opts.forEach(opt => {
         const btn = document.createElement("button");
         btn.textContent = opt;
+
         btn.onclick = () => {
             selectedAnswer = opt;
             document.querySelectorAll("#answers button")
                 .forEach(b => b.style.border = "");
             btn.style.border = "2px solid black";
         };
-        answersDiv.appendChild(btn);
+
+        area.appendChild(btn);
     });
 }
 
-function showHardMode() {
+function showHard() {
     const input = document.createElement("input");
     input.type = "text";
     input.id = "hardInput";
@@ -115,13 +128,11 @@ function checkAnswer() {
     if (!currentQuestion) return;
 
     const mode = document.querySelector('input[name="mode"]:checked').value;
-    let userAnswer;
 
-    if (mode === "normal") {
-        userAnswer = selectedAnswer;
-    } else {
-        userAnswer = document.getElementById("hardInput").value.trim();
-    }
+    let userAnswer =
+        mode === "normal"
+            ? selectedAnswer
+            : document.getElementById("hardInput").value.trim();
 
     if (!userAnswer) return;
 
